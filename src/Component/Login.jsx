@@ -5,7 +5,7 @@ import Logo from "../assests/Logo.svg";
 const Login = () => {
   const handleSignin = () => {
     window.location.href =
-      "https://hiring.reachinbox.xyz/api/v1/auth/google-login?redirect_to=http://localhost:3000/Navigation";
+      "https://hiring.reachinbox.xyz/api/v1/auth/google-login?redirect_to=http:/Navigation";
   };
 
   return (
