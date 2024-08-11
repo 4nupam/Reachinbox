@@ -4,8 +4,11 @@ import Logo from "../assests/Logo.svg";
 
 const Login = () => {
   const handleSignin = () => {
-    window.location.href =
-      "https://hiring.reachinbox.xyz/api/v1/auth/google-login?redirect_to=http://Navigation";
+    const baseUrl =
+      process.env.NODE_ENV === "development"
+        ? process.env.REACT_APP_API_URL
+        : process.env.REACT_APP_API_PROD_URL;
+    window.location.href = `${baseUrl}/api/v1/auth/google-login?redirect_to=${baseUrl}/Navigation`;
   };
 
   return (
